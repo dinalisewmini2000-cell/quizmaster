@@ -8,12 +8,13 @@ export default function Login() {
         if (!email || !password) return alert("⚠️ Please fill in all details!");
 
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5005'}/api/login`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://quizmaster-production-4f7a.up.railway.app/'}/api/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
             });
             const data = await response.json();
+
 
             if (response.ok) {
                 localStorage.setItem('token', data.token);
