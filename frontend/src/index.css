@@ -1,0 +1,56 @@
+/* Global Reset - Fixes the white gaps at the edges */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base HTML and Body layout */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* Prevents horizontal scrolling issues */
+  background-color: #f8f9fa;
+  /* Clean light background color */
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container used for all pages to have a clean, white-box layout */
+.page-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: none;
+  /* Border line removed as requested */
+}
+
+/* Ensure links and buttons have consistent font styles */
+a,
+button {
+  font-family: inherit;
+}
+
+/* Scrollbar styling for a modern look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
