@@ -8,7 +8,7 @@ export default function Login() {
         if (!email || !password) return alert("⚠️ Please fill in all details!");
 
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://quizmaster-production-4f7a.up.railway.app/'}/api/login`, {
+            const response = await fetch(`https://quizmaster-production-4f7a.up.railway.app/api/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
